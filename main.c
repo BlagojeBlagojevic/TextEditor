@@ -117,14 +117,14 @@ void Even_Handler(SDL_Event *event, Text* text) {
 			else if(k == DOWN_ARROW) {
 				cursor_y++;
 				if(text[cursor_y].char_in_line != 0)
-					cursor_x = text[cursor_y].char_in_line;
+					cursor_x = text[cursor_y].char_in_line+1;
 				else 
 					cursor_x = 0;
 				}
 			else if(k == UP_ARROW) {
 				if(cursor_y > 0) {
 					cursor_y--;
-					cursor_x = text[cursor_y].char_in_line;
+					cursor_x = text[cursor_y].char_in_line+1;
 
 					}
 				else if(cursor_x == 0) {
